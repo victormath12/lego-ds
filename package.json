@@ -4,7 +4,10 @@
   "scripts": {
     "commit": "git-cz",
     "clean": "lerna clean -y",
-    "build:tokens": "lerna run build --scope=@lego-ds/tokens --stream"
+    "dev:doc": "lerna run serve --scope=@lego-ds/doc --stream",
+    "dev:components": "lerna run dev --scope=@lego-ds/components --stream",
+    "build:tokens": "lerna run build --scope=@lego-ds/tokens --stream",
+    "build:components": "lerna run build --scope=@lego-ds/components --stream"
   },
   "devDependencies": {
     "commitizen": "^4.1.2",
@@ -24,8 +27,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test",
-      "pre-push": "yarn test"
+      "pre-commit": "",
+      "pre-push": ""
     }
   }
 }

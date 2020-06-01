@@ -2,14 +2,34 @@
   "name": "@lego-ds/components",
   "version": "0.0.1",
   "description": "lego-ds components library",
-  "main": "src/index.js",
-  "scripts": {},
-  "keywords": [
-    "components"
+  "scripts": {
+    "build": "stencil build --docs",
+    "dev": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.12.2"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/lego-ds/lego-ds.js",
+  "files": [
+    "dist/",
+    "loader/"
   ],
   "author": "Victor Caetano <victorsax12@gmail.com>",
   "homepage": "https://github.com/victormath12/lego-ds#readme",
   "license": "MIT",
+  "keywords": [
+    "components"
+  ],
   "publishConfig": {
     "access": "public",
     "directory": "dist"
