@@ -3,8 +3,9 @@
   "private": true,
   "scripts": {
     "commit": "git-cz",
-    "clean": "lerna clean -y",
-    "dev:doc": "lerna run serve --scope=@lego-ds/doc --stream",
+    "clean": "lerna clean -y && rm -rf node_modules",
+    "new": "node ./scripts/cli.js",
+    "dev:doc": "lerna run dev --scope=@lego-ds/doc --stream",
     "dev:components": "lerna run dev --scope=@lego-ds/components --stream",
     "build:tokens": "lerna run build --scope=@lego-ds/tokens --stream",
     "build:components": "lerna run build --scope=@lego-ds/components --stream"
@@ -13,7 +14,8 @@
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "^3.2.0",
     "husky": "^4.2.5",
-    "lerna": "^3.22.0"
+    "lerna": "^3.22.0",
+    "shelljs": "^0.8.4"
   },
   "workspaces": {
     "packages": [

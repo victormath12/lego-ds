@@ -1,14 +1,50 @@
 {
   "name": "@lego-ds/doc",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "lego-ds documentation",
   "main": "src/index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "gatsby develop -H 0.0.0.0 --open",
+    "build": "gatsby build --prefix-paths",
+    "deploy": "npm run build && gh-pages -d public",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "pretty-quick": "pretty-quick",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "@antv/g2": "^3.5.9",
+    "@lego-ds/components": "^0.0.1",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-styled-components": "^3.3.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@antv/gatsby-theme-antv": "^0.10.17",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "gatsby": "^2.15.34",
+    "gh-pages": "^2.1.1",
+    "husky": "^3.1.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
+  },
+  "peerDependencies": {
+    "styled-components": "^5.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "keywords": [
     "documentation"
   ],
   "author": "Victor Caetano <victorsax12@gmail.com>",
-  "homepage": "https://github.com/victormath12/lego-ds#readme",
+  "homepage": "https://github.com/victormath12/lego-ds",
   "license": "MIT",
   "publishConfig": {
     "access": "public",

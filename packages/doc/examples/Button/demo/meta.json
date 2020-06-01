@@ -1,0 +1,21 @@
+{
+  "title": {
+    "en": "Example"
+  },
+  "demos": [
+    {
+      "filename": "Default.jsx",
+      "title": {
+        "en": "Button Default"
+      },
+      "screenshot": "https://www.pinclipart.com/picdir/middle/49-494635_lego-svg-png-icon-free-download-onlinewebfonts-icon.png"
+    },
+    {
+      "filename": "Disabled.jsx",
+      "title": {
+        "en": "Button Disabled"
+      },
+      "screenshot": "https://www.pinclipart.com/picdir/middle/49-494635_lego-svg-png-icon-free-download-onlinewebfonts-icon.png"
+    }
+  ]
+}
