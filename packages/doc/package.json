@@ -1,0 +1,24 @@
+{
+  "name": "@lego-ds/doc",
+  "version": "0.0.1",
+  "description": "lego-ds documentation",
+  "main": "src/index.js",
+  "scripts": {},
+  "keywords": [
+    "documentation"
+  ],
+  "author": "Victor Caetano <victorsax12@gmail.com>",
+  "homepage": "https://github.com/victormath12/lego-ds#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victormath12/lego-ds.git"
+  },
+  "bugs": {
+    "url": "https://github.com/victormath12/lego-ds/issues"
+  }
+}
