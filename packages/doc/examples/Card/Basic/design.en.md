@@ -1,5 +1,0 @@
----
-title: Design
----
-
-Design Guides
