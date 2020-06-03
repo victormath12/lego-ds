@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "scripts": {
     "ng": "ng",
-    "dev": "ng serve",
+    "dev": "ng serve --port 3002",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
