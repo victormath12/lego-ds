@@ -4,6 +4,8 @@
   "description": "lego-ds components library",
   "scripts": {
     "build": "stencil build --docs",
+    "build:prod": "stencil build --prod",
+    "prepublish": "yarn build:prod",
     "dev": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
