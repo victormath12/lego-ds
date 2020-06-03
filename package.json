@@ -7,12 +7,12 @@
     "reset": "yarn clean && lerna bootstrap",
     "new": "node ./scripts/cli.js",
     "build:tokens": "lerna run build --scope=@lego-ds/tokens --stream",
-    "build:components": "lerna run build:prod --scope=@lego-ds/components --stream",
-    "dev:react": "yarn build:components && lerna run dev --scope=@lego-ds/lab-react --stream",
-    "dev:angular": "yarn build:components && lerna run dev --scope=@lego-ds/lab-angular --stream",
-    "dev:vue": "yarn build:components && lerna run dev --scope=@lego-ds/lab-vue --stream",
-    "dev:html": "yarn build:components && lerna run dev --scope=@lego-ds/lab-html --stream",
-    "dev:components": "lerna run dev --scope=@lego-ds/components --stream"
+    "build:stencil": "lerna run build:prod --scope=@lego-ds/components --stream",
+    "dev:stencil": "lerna run dev --scope=@lego-ds/components --stream",
+    "dev:react": "lerna run dev --scope=@lego-ds/lab-react --stream",
+    "dev:angular": "lerna run dev --scope=@lego-ds/lab-angular --stream",
+    "dev:vue": "lerna run dev --scope=@lego-ds/lab-vue --stream",
+    "dev:all": "node ./scripts/run-labs.js"
   },
   "devDependencies": {
     "commitizen": "^4.1.2",
@@ -26,10 +26,6 @@
       "packages/*"
     ],
     "nohoist": [
-      "react",
-      "react-dom",
-      "react-scripts",
-      "jest",
       "**/@types/**",
       "**/@types*/**"
     ]
