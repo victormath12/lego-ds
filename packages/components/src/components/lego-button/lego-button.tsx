@@ -9,7 +9,7 @@ export class LegoButton {
 
   render() {
     return (
-      <button class="lego-button">Hello Guys</button>
+      <button class="lego-button">Its a button Guys</button>
     );
   }
 

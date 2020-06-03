@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="packages/doc/site/images/lego.png" width="100px" />
+  <img src=".github/lego.png" width="100px" />
 </p>
 
 Lego.ds is an open-source Design System project based on building blocks to create an amazing cross-platform digital experiences.
