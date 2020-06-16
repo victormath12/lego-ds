@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build:tokens": "lerna run build --scope=@lego-ds/tokens --stream",
-    "build:stencil": "lerna run build:prod --scope=@lego-ds/core --stream",
+    "build:core": "lerna run build --scope=@lego-ds/core --stream",
     "dev": "node ./scripts/examples.js",
     "dev:core": "lerna run dev --scope=@lego-ds/core --stream",
     "commit": "git-cz",

@@ -3,10 +3,6 @@
   "sideEffects": false,
   "version": "0.0.1",
   "description": "React specific wrapper for component-library",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ionic-team/ionic.git"
-  },
   "scripts": {
     "build": "npm run clean && npm run compile",
     "clean": "rm -rf dist",
@@ -19,6 +15,10 @@
   "files": [
     "dist/"
   ],
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
   "devDependencies": {
     "@types/jest": "23.3.9",
     "@types/node": "10.12.9",
@@ -46,5 +46,15 @@
       "node_modules",
       "dist"
     ]
+  },
+  "author": "Victor Caetano <victorsax12@gmail.com>",
+  "homepage": "https://github.com/victormath12/lego-ds#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victormath12/lego-ds.git"
+  },
+  "bugs": {
+    "url": "https://github.com/victormath12/lego-ds/issues"
   }
 }

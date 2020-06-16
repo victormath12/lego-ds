@@ -1,5 +1,6 @@
 {
   "version": "independent",
+  "npmClient": "yarn",
   "ignoreChanges": ["**/*.test.js", "**/*.md"],
   "packages": [
     "packages/*",
@@ -7,8 +8,8 @@
   ],
   "command": {
     "publish": {
-      "conventionalCommits": true,
-      "yes": true
+      "message": "chore(release): Publishing component library 🚀",
+      "conventionalCommits": true
     },
     "version": {
       "conventionalCommits": true,
