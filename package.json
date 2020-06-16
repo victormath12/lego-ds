@@ -1,34 +1,30 @@
 {
   "name": "root",
+  "description": "Lego.ds mono-repo root package.json, used mainly to execute build scripts. This package is not published to npm.",
   "private": true,
   "scripts": {
-    "commit": "git-cz",
-    "clean": "lerna clean -y && rm -rf node_modules",
-    "reset": "yarn clean && lerna bootstrap",
-    "new": "node ./scripts/cli.js",
     "build:tokens": "lerna run build --scope=@lego-ds/tokens --stream",
-    "build:stencil": "lerna run build:prod --scope=@lego-ds/components --stream",
-    "dev:stencil": "lerna run dev --scope=@lego-ds/components --stream",
-    "dev:react": "lerna run dev --scope=@lego-ds/lab-react --stream",
-    "dev:angular": "lerna run dev --scope=@lego-ds/lab-angular --stream",
-    "dev:vue": "lerna run dev --scope=@lego-ds/lab-vue --stream",
-    "dev:all": "node ./scripts/run-labs.js"
+    "build:stencil": "lerna run build:prod --scope=@lego-ds/core --stream",
+    "dev": "node ./scripts/examples.js",
+    "dev:core": "lerna run dev --scope=@lego-ds/core --stream",
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i ./CHANGELOG.md -k core -s",
+    "prepare:examples": "node ./scripts/examples.js prepare",
+    "clean": "lerna clean -y && rm -rf node_modules",
+    "bootstrap": "lerna bootstrap --force-local && yarn",
+    "reset": "yarn clean && yarn bootstrap",
+    "new": "node ./scripts/cli.js"
   },
   "devDependencies": {
+    "colorette": "^1.2.0",
     "commitizen": "^4.1.2",
+    "conventional-changelog-cli": "^2.0.34",
     "cz-conventional-changelog": "^3.2.0",
+    "execa": "^4.0.2",
     "husky": "^4.2.5",
     "lerna": "^3.22.0",
+    "listr": "^0.14.3",
     "shelljs": "^0.8.4"
-  },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ],
-    "nohoist": [
-      "**/@types/**",
-      "**/@types*/**"
-    ]
   },
   "config": {
     "commitizen": {

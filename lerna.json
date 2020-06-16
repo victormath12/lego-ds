@@ -1,14 +1,14 @@
 {
   "version": "independent",
-  "npmClient": "yarn",
-  "useWorkspaces": true,
   "ignoreChanges": ["**/*.test.js", "**/*.md"],
   "packages": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ],
   "command": {
     "publish": {
-      "conventionalCommits": true
+      "conventionalCommits": true,
+      "yes": true
     },
     "version": {
       "conventionalCommits": true,
