@@ -10,6 +10,11 @@
     "prebuild": "rm -rf ./dist",
     "prepublishOnly": "node ../../scripts/prepublish.js"
   },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2"
+  },
   "keywords": [
     "tokens"
   ],
@@ -26,10 +31,5 @@
   },
   "bugs": {
     "url": "https://github.com/victormath12/lego-ds/issues"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2"
   }
 }

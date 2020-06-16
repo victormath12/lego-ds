@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Lego Component Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <script type="module" src="/build/lego-ds.esm.js"></script>
+  <script nomodule src="/build/lego-ds.js"></script>
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #D6FCFA;
+    }
+    .spacing {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Stencil</h1>
+  <hr/>
+
+  <h3>Buttons</h3>
+  <section>
+    <span class="spacing">
+      <legods-button>Default</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button variant="primary">Primary</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button variant="secondary">Secondary</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button variant="tertiary">Tertiary</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button variant="dark">Dark</legods-button>
+    </span>
+  </section>
+
+  <h3>Flat Buttons</h3>
+  <section>
+    <span class="spacing">
+      <legods-button flat>Default</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button flat variant="primary">Primary</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button flat variant="secondary">Secondary</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button flat variant="tertiary">Tertiary</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button flat variant="dark">Dark</legods-button>
+    </span>
+  </section>
+
+  <h3>Disabled Button</h3>
+  <section>
+    <span class="spacing">
+      <legods-button flat variant="primary" disabled>disabled flat button</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button variant="primary" disabled>disabled button</legods-button>
+    </span>
+  </section>
+
+  <h3>Full Width Button</h3>
+  <section>
+    <span class="spacing">
+      <legods-button flat full>Full width flat button</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button full>Full with button</legods-button>
+    </span>
+  </section>
+  <hr/>
+</body>
+
+
+<script>
+  const button = document.querySelector('legods-button');
+  button.addEventListener('buttonClick', event => console.log(event.detail));
+</script>
+</html>
