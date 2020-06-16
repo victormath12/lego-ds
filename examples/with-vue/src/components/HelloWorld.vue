@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
     <hr />
     <span class="spacing">
       <legods-button @buttonClick="event => handleClick(event)">Default</legods-button>
