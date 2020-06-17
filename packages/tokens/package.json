@@ -3,25 +3,26 @@
   "version": "0.0.1",
   "description": "lego-ds design tokens definitions",
   "main": "src/index.js",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build": "yarn build:cjs && yarn build:esm",
     "build:cjs": "NODE_ENV=cjs babel ./src --out-dir dist/cjs",
     "build:esm": "NODE_ENV=esm babel ./src --out-dir dist/esm",
-    "prebuild": "rm -rf ./dist",
-    "postbuild": "node ../../scripts/postbuild.js ./dist",
-    "prepublishOnly": "cd dist"
+    "prebuild": "rm -rf ./dist"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2"
   },
-  "keywords": [
-    "tokens"
-  ],
   "author": "Victor Caetano <victorsax12@gmail.com>",
   "homepage": "https://github.com/victormath12/lego-ds#readme",
   "license": "MIT",
+  "keywords": [
+    "tokens"
+  ],
   "publishConfig": {
     "access": "public"
   },

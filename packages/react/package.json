@@ -5,8 +5,6 @@
   "description": "React specific wrapper for component-library",
   "scripts": {
     "build": "npm run clean && npm run compile",
-    "postbuild": "node ./postbuild.js ./dist",
-    "prepublishOnly": "cd dist",
     "clean": "rm -rf dist",
     "compile": "npm run tsc",
     "tsc": "tsc -p ."
