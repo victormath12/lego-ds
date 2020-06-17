@@ -30,7 +30,7 @@ export class LegoButton {
     return (
       <Host style={this.full && { width: `100%` }}>    
         <button 
-          {...this.component.properties}
+          {...getProps(this.el.attributes)}
           class={`
             legods-button 
             ${this.variant && this.variant} 
