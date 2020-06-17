@@ -1,6 +1,5 @@
 {
   "name": "with-react",
-  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@lego-ds/core": "^0.1.0",

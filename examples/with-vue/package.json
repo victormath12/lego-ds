@@ -1,6 +1,5 @@
 {
   "name": "with-vue",
-  "version": "0.1.0",
   "description": "Vue app for web components development",
   "private": true,
   "main": "src/index.js",

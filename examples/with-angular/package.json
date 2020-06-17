@@ -1,6 +1,5 @@
 {
   "name": "with-angular",
-  "version": "0.1.0",
   "description": "Angular app for web components development",
   "private": true,
   "main": "src/index.js",
