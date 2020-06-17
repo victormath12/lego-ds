@@ -1,6 +1,7 @@
 {
   "name": "@lego-ds/tokens",
   "version": "0.0.1",
+  "private": false,
   "description": "lego-ds design tokens definitions",
   "main": "src/index.js",
   "scripts": {
