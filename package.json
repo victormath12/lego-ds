@@ -13,6 +13,7 @@
     "prepare:examples": "node ./scripts/examples.js prepare",
     "clean": "lerna clean -y && rm -rf node_modules",
     "bootstrap": "lerna bootstrap --force-local && yarn",
+    "bootstrap:ci": "lerna bootstrap && yarn",
     "reset": "yarn clean && yarn bootstrap",
     "new": "node ./scripts/cli.js"
   },
