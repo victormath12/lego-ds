@@ -5,6 +5,7 @@
   "scripts": {
     "build:tokens": "lerna run build --scope=@lego-ds/tokens --stream",
     "build:core": "lerna run build --scope=@lego-ds/core --stream",
+    "build:react": "lerna run build --scope=@lego-ds/react --stream",
     "dev": "node ./scripts/examples.js",
     "dev:core": "lerna run dev --scope=@lego-ds/core --stream",
     "commit": "git-cz",
