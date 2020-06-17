@@ -1,10 +1,8 @@
 const { resolve } = require('path');
 const { writeFileSync } = require('fs');
-const [, , package, buildFolder] = process.argv;
+const [, , buildFolder] = process.argv;
 
-console.log(package, buildFolder);
-
-function core(buildFolder) {
+function postbuild(buildFolder) {
   const packageFile = require(resolve('./package.json'));
   const { publishConfig, scripts, main, ...jsonFile } = packageFile;
 
@@ -17,4 +15,4 @@ function core(buildFolder) {
   writeFileSync(`${buildFolder}/package.json`, JSON.stringify(jsonFile));
 }
 
-// core();
+postbuild(buildFolder);

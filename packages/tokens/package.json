@@ -7,7 +7,8 @@
     "build": "yarn build:cjs && yarn build:esm",
     "build:cjs": "NODE_ENV=cjs babel ./src --out-dir dist/cjs",
     "build:esm": "NODE_ENV=esm babel ./src --out-dir dist/esm",
-    "prebuild": "rm -rf ./dist"
+    "prebuild": "rm -rf ./dist",
+    "postbuild": "node ../../scripts/postbuild.js ./dist"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
@@ -31,5 +32,5 @@
   "bugs": {
     "url": "https://github.com/victormath12/lego-ds/issues"
   },
-  "gitHead": "a1d239bf112130ac3515eeecae5d3a9c92f3f43c"
+  "gitHead": "152be256457a023876fa42e98de9a7d2f34e5bfa"
 }
