@@ -10,7 +10,6 @@ function postbuild(buildFolder) {
     main: "./index.js",
     module: "./index.js",
     types: "./index.d.ts",
-    private: false,
   });
 
   writeFileSync(`${buildFolder}/package.json`, JSON.stringify(jsonFile));

@@ -17,8 +17,7 @@
     "dist/"
   ],
   "publishConfig": {
-    "access": "public",
-    "directory": "dist"
+    "access": "public"
   },
   "devDependencies": {
     "@types/jest": "23.3.9",
@@ -58,5 +57,5 @@
   "bugs": {
     "url": "https://github.com/victormath12/lego-ds/issues"
   },
-  "gitHead": "a9f051cba335040771c107d004e53cf8f11796d3"
+  "gitHead": "f52816aee4bd217ade47ddbec67379b4eca5b119"
 }

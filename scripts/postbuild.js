@@ -9,7 +9,6 @@ function postbuild(buildFolder) {
   Object.assign(jsonFile, {
     main: './dist/cjs',
     module: './dist/esm',
-    private: false,
   });
 
   writeFileSync(`${buildFolder}/package.json`, JSON.stringify(jsonFile));

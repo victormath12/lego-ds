@@ -1,7 +1,6 @@
 {
   "name": "@lego-ds/tokens",
   "version": "0.0.1",
-  "private": false,
   "description": "lego-ds design tokens definitions",
   "main": "src/index.js",
   "scripts": {
@@ -23,8 +22,7 @@
   "homepage": "https://github.com/victormath12/lego-ds#readme",
   "license": "MIT",
   "publishConfig": {
-    "access": "public",
-    "directory": "dist"
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -33,5 +31,5 @@
   "bugs": {
     "url": "https://github.com/victormath12/lego-ds/issues"
   },
-  "gitHead": "a9f051cba335040771c107d004e53cf8f11796d3"
+  "gitHead": "f52816aee4bd217ade47ddbec67379b4eca5b119"
 }
