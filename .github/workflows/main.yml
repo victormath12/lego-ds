@@ -27,11 +27,15 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
-        run: yarn bootstrap
+        run: yarn bootstrap:ci
 
       - name: Build @lego-ds/tokens
         run: |
           yarn build:tokens
+
+      - name: Build @lego-ds/react-output-target
+        run: |
+          yarn build:stencil-react
       
       - name: Build @lego-ds/core
         run: |
