@@ -17,14 +17,17 @@
       "removeComments": false,
       "sourceMap": true,
       "jsx": "react",
-      "target": "es2015"
+      "target": "es2015",
+      "typeRoots": ["node_modules/@types"],
+      "skipLibCheck": true,
     },
     "include": [
       "src/**/*.ts",
       "src/**/*.tsx"
     ],
     "exclude": [
-      "**/__tests__/**"
+      "**/__tests__/**",
+      "node_modules"
     ],
     "compileOnSave": false,
     "buildOnSave": false

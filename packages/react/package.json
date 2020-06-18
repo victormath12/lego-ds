@@ -19,6 +19,7 @@
     "access": "public"
   },
   "devDependencies": {
+    "@stencil/core": ">=1.8.0",
     "@types/jest": "23.3.9",
     "@types/node": "10.12.9",
     "@types/react": "16.7.6",
