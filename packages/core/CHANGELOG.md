@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/victormath12/lego-ds/compare/@lego-ds/core@1.2.0...@lego-ds/core@1.3.0) (2020-06-18)
+
+
+### Features
+
+* **button:** adjusting component button ([bffe893](https://github.com/victormath12/lego-ds/commit/bffe8935ce52f0bd64f0d00137d59019cf26b0b6))
+* **react-output-target:** adding a custom stenciljs react-output-target ([69816ef](https://github.com/victormath12/lego-ds/commit/69816efab5508c4049fd33bf52685be61e8b5710))
+
+
+
+
+
 # [1.2.0](https://github.com/victormath12/lego-ds/compare/@lego-ds/core@1.1.0...@lego-ds/core@1.2.0) (2020-06-17)
 
 

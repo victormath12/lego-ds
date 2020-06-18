@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/victormath12/lego-ds/compare/@lego-ds/react@0.1.1...@lego-ds/react@0.2.0) (2020-06-18)
+
+
+### Features
+
+* **react-output-target:** adding a custom stenciljs react-output-target ([69816ef](https://github.com/victormath12/lego-ds/commit/69816efab5508c4049fd33bf52685be61e8b5710))
+
+
+
+
+
 ## [0.1.1](https://github.com/victormath12/lego-ds/compare/@lego-ds/react@0.1.0...@lego-ds/react@0.1.1) (2020-06-17)
 
 **Note:** Version bump only for package @lego-ds/react
