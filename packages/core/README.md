@@ -13,16 +13,3 @@ applyPolyfills().then(() => {
   defineCustomElements()
 })
 ```
-
-## React
-
-```js
-npm install --save-dev babel-plugin-react-html-attrs
-
-// .babelrc
-{
-  "plugins": [
-    "react-html-attrs"
-  ]
-}
-```
