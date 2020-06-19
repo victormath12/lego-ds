@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/victormath12/lego-ds/compare/@lego-ds/core@1.3.3...@lego-ds/core@1.3.4) (2020-06-19)
+
+**Note:** Version bump only for package @lego-ds/core
+
+
+
+
+
 ## [1.3.3](https://github.com/victormath12/lego-ds/compare/@lego-ds/core@1.3.2...@lego-ds/core@1.3.3) (2020-06-18)
 
 **Note:** Version bump only for package @lego-ds/core
