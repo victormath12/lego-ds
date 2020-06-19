@@ -28,7 +28,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
-        run: yarn bootstrap:ci
+        run: yarn bootstrap
 
       - name: Build @lego-ds/tokens
         run: |
