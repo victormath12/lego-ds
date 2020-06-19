@@ -1,6 +1,6 @@
 {
   "name": "@lego-ds/react",
-  "version": "0.2.8",
+  "version": "1.3.0",
   "description": "React specific wrapper for component-library",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
