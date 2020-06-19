@@ -1,14 +1,7 @@
 {
   "name": "@lego-ds/react",
-  "sideEffects": false,
   "version": "0.2.3",
   "description": "React specific wrapper for component-library",
-  "scripts": {
-    "build": "npm run clean && npm run compile",
-    "clean": "rm -rf dist",
-    "compile": "npm run tsc",
-    "tsc": "tsc -p ."
-  },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -17,6 +10,12 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf dist",
+    "compile": "npm run tsc",
+    "tsc": "tsc -p ."
   },
   "devDependencies": {
     "@stencil/core": ">=1.8.0",
