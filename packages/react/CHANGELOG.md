@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/victormath12/lego-ds/compare/@lego-ds/react@0.2.3...@lego-ds/react@0.2.4) (2020-06-19)
+
+
+### Bug Fixes
+
+* **react:** adjusting package.json sideEffect ([b1f9115](https://github.com/victormath12/lego-ds/commit/b1f911557e5ffe6d1f5c26e44ed88415219db792))
+
+
+
+
+
 ## [0.2.3](https://github.com/victormath12/lego-ds/compare/@lego-ds/react@0.2.2...@lego-ds/react@0.2.3) (2020-06-18)
 
 **Note:** Version bump only for package @lego-ds/react
