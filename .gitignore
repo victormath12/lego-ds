@@ -28,3 +28,4 @@ UserInterfaceState.xcuserstate
 # Yarn & Lerna
 yarn-error.log
 lerna-debug.log
+.npmrc
