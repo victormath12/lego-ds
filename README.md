@@ -4,9 +4,10 @@
 
 Lego.ds is an open-source Design System project based on building blocks to create an amazing cross-platform digital experiences.
 
-## Documentation
+## Documentation 🚧 (Under Construction)
 
 Lego.ds is documented at [Lego.ds Documentation](https://github.com/victormath12/lego-ds).
+
 
 ## Architecture
 
@@ -15,7 +16,9 @@ Here's an overview of our packages:
 
 | Package | Version | Size |
 | - | - | - |
-| [`@lego-ds/core`](/packages/components) | [![npm version](https://badgen.net/npm/v/@lego-ds/core)](https://www.npmjs.com/package/@lego-ds/core) | [![Bundle size](https://badgen.net/bundlephobia/minzip/@lego-ds/core)](https://bundlephobia.com/result?p=@lego-ds/core) |
+| [`@lego-ds/core`](/packages/core) | [![npm version](https://badgen.net/npm/v/@lego-ds/core)](https://www.npmjs.com/package/@lego-ds/core) | [![Bundle size](https://badgen.net/bundlephobia/minzip/@lego-ds/core)](https://bundlephobia.com/result?p=@lego-ds/core) |
+| [`@lego-ds/react`](/packages/react) | [![npm version](https://badgen.net/npm/v/@lego-ds/react)](https://www.npmjs.com/package/@lego-ds/react) | [![Bundle size](https://badgen.net/bundlephobia/minzip/@lego-ds/react)](https://bundlephobia.com/result?p=@lego-ds/react) |
+| [`@lego-ds/tokens`](/packages/tokens) | [![npm version](https://badgen.net/npm/v/@lego-ds/tokens)](https://www.npmjs.com/package/@lego-ds/tokens) | [![Bundle size](https://badgen.net/bundlephobia/minzip/@lego-ds/tokens)](https://bundlephobia.com/result?p=@lego-ds/tokens) |
 
 
 ## Bootstraping
