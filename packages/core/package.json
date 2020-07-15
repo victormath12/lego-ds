@@ -10,6 +10,13 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/lego-ds/core/lego-ds.js",
+  "scripts": {
+    "prebuild": "rm -rf dist && rm -rf loader && rm -rf www",
+    "build": "stencil build --prod --docs",
+    "dev": "stencil build --prod --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
+  },
   "files": [
     "dist/",
     "loader/"
@@ -22,13 +29,6 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "prebuild": "rm -rf dist && rm -rf loader && rm -rf www",
-    "build": "stencil build --prod",
-    "dev": "stencil build --prod --watch --serve",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
     "@lego-ds/react-output-target": "^0.2.0"

@@ -1,0 +1,45 @@
+{
+  "name": "@lego-ds/doc",
+  "version": "0.1.0",
+  "description": "lego-ds documentation",
+  "main": "src/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "env TARGET_TAG=local-sb && start-storybook -p 6006",
+    "build": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-backgrounds": "^5.3.19",
+    "@storybook/addon-console": "^1.2.1",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/html": "^5.3.19",
+    "@storybook/theming": "^5.3.19",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "storybook-addon-preview": "^1.2.0",
+    "storybook-readme": "^5.0.8",
+    "write-file-webpack-plugin": "^4.5.1"
+  },
+  "author": "Victor Caetano <victorsax12@gmail.com>",
+  "homepage": "https://github.com/victormath12/lego-ds#readme",
+  "license": "MIT",
+  "keywords": [
+    "doc"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victormath12/lego-ds.git"
+  },
+  "bugs": {
+    "url": "https://github.com/victormath12/lego-ds/issues"
+  },
+  "gitHead": "f52816aee4bd217ade47ddbec67379b4eca5b119"
+}
