@@ -5,6 +5,7 @@ import { reactOutputTarget } from '@lego-ds/react-output-target';
 export const config: Config = {
   namespace: 'lego-ds',
   taskQueue: 'async',
+  globalScript: 'src/globals/configure.js',
   bundles: [
     { components: ['legods-button'] }
   ],
@@ -28,8 +29,8 @@ export const config: Config = {
   plugins: [
     sass({
       injectGlobalPaths: [
-        'src/globals/variables.scss',
-        'src/globals/mixins.scss'
+        'src/globals/styles/variables.scss',
+        'src/globals/styles/mixins.scss'
       ]
     })
   ],
