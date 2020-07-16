@@ -39,7 +39,7 @@ export class LegoButton {
           `}
           style={this.styles}
           disabled={this.disabled}>
-          <slot /> Victor
+          <slot />
         </button>
       </Host>
     );

@@ -1,4 +1,72 @@
+<link rel="shortcut icon" href="./lego.png" />
+
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap');
+
+  .sidebar-container {
+    background-image: url('packages/doc/.storybook/Pattern.png');
+  }
+
+  /*
+  * Remove menu button circle
+  */
+  .sidebar-header div:nth-child(1) {
+    padding: 30px;
+    margin: 0;
+  }
+
+  .sidebar-header div:nth-child(1) a img {
+    max-width: 100%;
+  }
+
+  .sidebar-header div:nth-child(2){
+    display: none;
+  }
+
+  .sidebar-container .sidebar-item,
+  .sidebar-container .sidebar-item:hover {
+    font-family: 'Roboto', 'Tahoma';
+    color: #f0f0f0;
+    padding: 13px 15px;
+    border-right: 4px solid transparent;
+  }
+  .sidebar-container .sidebar-item.selected {
+    font-family: 'Roboto', 'Tahoma';
+    border-right: 4px solid #FFC107;
+    background: #212121;
+  }
+
+  .sidebar-header button {
+    font-family: 'Roboto', 'Tahoma';
+    color: #f0f0f0;
+    box-shadow: #f0f0f0 0 0 0 1px inset;
+  }
+
+  .sidebar-header button:hover {
+    font-family: 'Roboto', 'Tahoma';
+    color: #fff;
+    box-shadow: #fff 0 0 0 1px inset;
+  }
+
+  .sidebar-header img {
+    max-width: 80%;
+    margin-left: auto;
+  }
+
+  .simplebar-content .sidebar-subheading {
+    font-family: 'Roboto', 'Tahoma';
+    color: #fff;
+  }
+
+  .simplebar-content .tablist .tabbutton {
+    font-family: 'Roboto', 'Tahoma';
+    color: #fff;
+  }
+
+  #storybook-panel-root>div:nth-child(2) > div {
+    background: #313131;
+  }
+
   table {
     display: block !important;
     overflow: auto !important;

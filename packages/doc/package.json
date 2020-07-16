@@ -12,15 +12,22 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
+    "@storybook/addon-a11y": "^5.3.19",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-backgrounds": "^5.3.19",
     "@storybook/addon-console": "^1.2.1",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-info": "^5.3.19",
     "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-options": "^5.3.19",
+    "@storybook/addon-viewport": "^5.3.19",
     "@storybook/addons": "^5.3.19",
     "@storybook/html": "^5.3.19",
     "@storybook/theming": "^5.3.19",
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^5.1.1",
+    "storybook-addon-figma": "^0.1.0",
+    "storybook-addon-matrix": "^1.6.0",
     "storybook-addon-preview": "^1.2.0",
     "storybook-readme": "^5.0.8",
     "write-file-webpack-plugin": "^4.5.1"
@@ -41,5 +48,8 @@
   "bugs": {
     "url": "https://github.com/victormath12/lego-ds/issues"
   },
-  "gitHead": "f52816aee4bd217ade47ddbec67379b4eca5b119"
+  "gitHead": "f52816aee4bd217ade47ddbec67379b4eca5b119",
+  "dependencies": {
+    "@vanillawc/wc-markdown": "^1.6.3"
+  }
 }
