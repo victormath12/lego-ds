@@ -7,8 +7,8 @@
     "dist/"
   ],
   "scripts": {
-    "dev": "env TARGET_TAG=local-sb && start-storybook -p 6006",
-    "build": "build-storybook"
+    "dev": "env TARGET_TAG=local-sb && start-storybook -s ./assets -p 3004",
+    "build": "build-storybook -c .storybook -s ./assets"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
@@ -19,6 +19,7 @@
     "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-info": "^5.3.19",
     "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
     "@storybook/addon-options": "^5.3.19",
     "@storybook/addon-viewport": "^5.3.19",
     "@storybook/addons": "^5.3.19",
@@ -29,6 +30,7 @@
     "storybook-addon-figma": "^0.1.0",
     "storybook-addon-matrix": "^1.6.0",
     "storybook-addon-preview": "^1.2.0",
+    "storybook-addon-root-attribute": "^1.0.0",
     "storybook-readme": "^5.0.8",
     "write-file-webpack-plugin": "^4.5.1"
   },
@@ -50,6 +52,9 @@
   },
   "gitHead": "f52816aee4bd217ade47ddbec67379b4eca5b119",
   "dependencies": {
+    "@lego-ds/design-tokens": "^1.1.0",
+    "@lego-ds/html": "^1.1.0",
+    "@stencil/core": "^1.16.4",
     "@vanillawc/wc-markdown": "^1.6.3"
   }
 }

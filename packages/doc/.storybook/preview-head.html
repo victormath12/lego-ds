@@ -35,10 +35,18 @@
   }
 
   .markdown-container zero-md {
+    width: 960px !important;
     padding-bottom: 40px;
   }
 
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.2.10/webcomponents-loader.min.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+<script 
+  type="module"
+  src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"
+  css-urls="[
+    'https://cdn.jsdelivr.net/npm/github-markdown-css@2/github-markdown.min.css',
+    'https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism-twilight.css'
+  ]"
+></script>

@@ -1,13 +1,26 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 import { reactOutputTarget } from '@lego-ds/react-output-target';
+import replace from '@rollup/plugin-replace';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+
+// const plugins = process.env.USE_PEER == 'true' ? [peerDepsExternal()] : []
+
+const plugins = process.env.USE_PEER == 'true' ? [peerDepsExternal()] : [];
+
+plugins.push(
+  replace({
+    TARGET_TAG: process.env.TARGET_TAG,
+    delimiters: ["@", "@"]
+  })
+);
 
 export const config: Config = {
   namespace: 'lego-ds',
   taskQueue: 'async',
   globalScript: 'src/globals/configure.js',
   bundles: [
-    { components: ['legods-button'] }
+    { components: ['legods-button', 'legods-input', 'soma-text-field', 'soma-checkbox'] }
   ],
   outputTargets: [
     reactOutputTarget({
@@ -32,7 +45,8 @@ export const config: Config = {
         'src/globals/styles/variables.scss',
         'src/globals/styles/mixins.scss'
       ]
-    })
+    }),
+    ...plugins
   ],
   hashFileNames: true,
   enableCache: true,

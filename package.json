@@ -10,7 +10,7 @@
     "build:doc": "yarn build:core && lerna run build --scope=@lego-ds/doc --stream",
     "dev": "node ./scripts/run-dev.js",
     "dev:core": "lerna run dev --scope=@lego-ds/core --stream",
-    "dev:doc": "node ./scripts/run-doc.js",
+    "doc": "node ./scripts/run-doc.js",
     "commit": "git-cz",
     "changelog": "conventional-changelog -p angular -i ./CHANGELOG.md -k core -s",
     "clean": "lerna clean -y && rm -rf node_modules",

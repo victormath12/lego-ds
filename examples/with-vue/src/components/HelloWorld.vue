@@ -1,88 +1,76 @@
 <template>
   <div class="hello">
+    <soma-button aria-label="" @soma-click="event => changeTheme('xp')">USAR XP</soma-button> &nbsp;
+    <soma-button aria-label="" @soma-click="event => changeTheme('placeholder')">USAR CLEAR</soma-button>
     <hr />
-    <span class="spacing">
-      <legods-button @buttonClick="event => handleClick(event)">Default</legods-button>
-    </span>
-    <span class="spacing">
-      <legods-button variant="primary" @buttonClick="event => handleClick(event)">Primary</legods-button>
-    </span>
-    <span class="spacing">
-      <legods-button variant="secondary" @buttonClick="event => handleClick(event)">Secondary</legods-button>
-    </span>
-    <span class="spacing">
-      <legods-button variant="tertiary" @buttonClick="event => handleClick(event)">Tertiary</legods-button>
-    </span>
-    <span class="spacing">
-      <legods-button variant="dark" @buttonClick="event => handleClick(event)">Dark</legods-button>
-    </span>
-    <h3>Flat Buttons</h3>
-    <section>
-      <span class="spacing">
-        <legods-button flat @buttonClick="event => handleClick(event)">Default</legods-button>
-      </span>
-      <span class="spacing">
-        <legods-button flat variant="primary" @buttonClick="event => handleClick(event)">Primary</legods-button>
-      </span>
-      <span class="spacing">
-        <legods-button flat variant="secondary" @buttonClick="event => handleClick(event)">Secondary</legods-button>
-      </span>
-      <span class="spacing">
-        <legods-button flat variant="tertiary" @buttonClick="event => handleClick(event)">Tertiary</legods-button>
-      </span>
-      <span class="spacing">
-        <legods-button flat variant="dark" @buttonClick="event => handleClick(event)">Dark</legods-button>
-      </span>
-    </section>
 
-    <h3>Disabled Button</h3>
-    <section>
-      <span class="spacing">
-        <legods-button flat variant="primary" disabled @buttonClick="event => handleClick(event)">disabled flat button</legods-button>
-      </span>
-      <span class="spacing">
-        <legods-button variant="primary" disabled @buttonClick="event => handleClick(event)">disabled button</legods-button>
-      </span>
-    </section>
+    <pre>{{ formResult }}</pre>
 
-    <h3>Full Width Button</h3>
-    <section>
-      <span class="spacing">
-        <legods-button flat full @buttonClick="event => handleClick(event)">Full width flat button</legods-button>
-      </span>
-      <span class="spacing">
-        <legods-button full @buttonClick="event => handleClick(event)">Full with button</legods-button>
-      </span>
-    </section>
+    <form>
 
-    <h3>Styled Button</h3>
-    <section>
-      <span class="spacing">
-        <legods-button 
-          @buttonClick="event => handleClick(event)"
-          aria-label="Button with customizable style (pink color) and a11y attributes"
-          :styles.prop="{
-            width: '200px',
-            height: '80px',
-            backgroundColor: '#ff57ac'
-          }">Styled button</legods-button>
-      </span>
-    </section>
+      <!-- Without v-model, just value and input event -->
+      <soma-text-field
+        label="label"
+        name="name"
+        inputId="inputId"
+        :value="formResult.name"
+        @input="formResult.name = $event.target.value"
+        aria-label="">
+      </soma-text-field>
+
+      <!-- With v-model -->
+      <SomaInput
+        label="Idade"
+        name="age"
+        aria-label=""
+        inputId="age"
+        v-model="formResult.age">
+      </SomaInput>
+
+      <soma-button aria-label="" @soma-click="() => submitForm()">enviar</soma-button>
+    </form>
+    
   </div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String,
-  },
-  methods: {
-    handleClick: function (event) {
-      console.log(event.detail)
+  import SomaDS from '@lego-ds/design-tokens';
+  import SomaInput from './SomaInput.vue';
+
+  export default {
+    name: 'HelloWorld',
+    components: {
+      SomaInput,
+    },
+    props: {
+      msg: String,
+    },
+    data: () => ({
+      formResult: {
+        name: '',
+        age: '',
+        enrolled: false
+      },
+    }),
+    methods: {
+      handleClick: function (event) {
+        console.log(event.detail)
+      },
+
+      changeTheme: function (theme) {
+        SomaDS.use(theme)
+      },
+
+      onValueChange: function(ev) {
+        this.$emit('input', ev.target.value)
+      },
+
+      submitForm: function() {
+        const {name, age, enrolled} = this.formResult;
+        console.log({name, age, enrolled});
+      }
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

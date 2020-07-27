@@ -1,0 +1,211 @@
+<section>
+  <img src="./assets/angular.png" width="80px" alt="angular-logo" />
+  <hr/>
+  <span class="spacing">
+
+    <!-- 
+    <h1>Reactive Form (Form Control)</h1>
+    <p>Template-driven forms are suitable for small or simple forms, while reactive forms are more scalable and suitable for complex forms. For a comparison of the two approaches, see Introduction to Forms</p>
+    
+    <pre style="border: 1px solid #333; padding: 5px;">
+      {{ reactiveForm.value | json }}
+    </pre>
+
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactiveForm()">
+      <soma-text-field 
+        label="Nome" 
+        aria-label="digite..."
+        formControlName="name">
+      </soma-text-field>
+
+      <soma-text-field 
+        type="number"
+        label="Idade"
+        aria-label="digite..."
+        formControlName="age">
+      </soma-text-field>
+
+
+      <input 
+        label="Nome" 
+        aria-label="digite..."
+        formControlName="name" />
+
+      <input 
+        type="number"
+        label="Idade"
+        aria-label="digite..."
+        formControlName="age" />
+ 
+
+      <soma-button type="submit" [disabled]="!reactiveForm.valid">enviar</soma-button>
+
+     <button type="submit" [disabled]="!reactiveForm.valid">enviar</button> 
+    </form>
+
+      -->
+
+    
+  </span>
+
+  <hr />
+
+  <span class="spacing">
+
+    <!--
+
+    <h1>Template Driven Form (Two Way Data Binding)</h1>
+    <p>Template-driven forms use two-way data binding to update the data model in the component as changes are made in the template and vice versa.</p>
+    <pre style="border: 1px solid #333; padding: 5px;">
+      {{ templateDrivenModel | json }}
+    </pre>
+
+    <form
+      #templateDrivenForm="ngForm"
+      (ngSubmit)="onSubmitTemplateDrivenForm()">
+      
+      <soma-text-field
+       type="text"
+       label="Nome"
+       inputId="name"
+       name="name"
+       [(ngModel)]="templateDrivenModel.name"
+       required>
+       </soma-text-field>
+
+      <soma-text-field
+        type="number"
+        label="Idade"
+        inputId="name"
+        name="name"
+        [(ngModel)]="templateDrivenModel.age"
+        required>
+      </soma-text-field>
+
+      <soma-button type="submit">enviar</soma-button>
+    </form>
+
+    
+    <form
+      #templateDrivenForm="ngForm"
+      (ngSubmit)="onSubmitTemplateDrivenForm()">
+      
+      <input
+       type="text"
+       id="name"
+       name="name"
+       [(ngModel)]="templateDrivenModel.name"
+       required />
+
+      <input
+        type="number"
+        id="name"
+        name="name"
+        [(ngModel)]="templateDrivenModel.age"
+        required />
+
+      <button type="submit">enviar</button>
+    </form>
+    -->
+
+
+
+
+
+    <!--
+    <soma-text-field 
+      label="Nome" 
+      inputId="name"
+      name="name"
+      aria-label="digite...">
+    </soma-text-field>
+
+    <soma-text-field 
+      type="number"
+      label="Idade"
+      inputId="age"
+      name="age"
+      aria-label="digite...">
+    </soma-text-field>
+
+    <soma-button (soma-click)="changeTheme('xp')">enviar</soma-button>
+    -->
+  </span>
+
+  <p>
+    Reactive forms are more scalable than template-driven forms. They provide direct access to the underlying form API, and synchronous access to the form data model, making creating large-scale forms easier. Reactive forms require less setup for testing, and testing does not require deep understanding of change detection to properly test form updates and validation.
+    Template-driven forms focus on simple scenarios and are not as reusable. They abstract away the underlying form API, and provide only asynchronous access to the form data model. The abstraction of template-driven forms also affects testing. Tests are deeply reliant on manual change detection execution to run properly, and require more setup.
+  </p>
+
+  <!--
+    
+    <soma-button (soma-click)="changeTheme('xp')">USAR XP</soma-button> &nbsp;
+    <soma-button (soma-click)="changeTheme('placeholder')">USAR CLEAR</soma-button>
+  <span class="spacing">
+    <legods-button (buttonClick)="handleClick($event)">Default</legods-button>
+  </span>
+  <span class="spacing">
+    <legods-button variant="primary" (buttonClick)="handleClick($event)">Primary</legods-button>
+  </span>
+  <span class="spacing">
+    <legods-button variant="secondary" (buttonClick)="handleClick($event)">Secondary</legods-button>
+  </span>
+  <span class="spacing">
+    <legods-button variant="tertiary" (buttonClick)="handleClick($event)">Tertiary</legods-button>
+  </span>
+  <span class="spacing">
+    <legods-button variant="dark" (buttonClick)="handleClick($event)">Dark</legods-button>
+  </span>
+
+  <h3 class="section-title">Flat Buttons</h3>
+  <section>
+    <span class="spacing">
+      <legods-button flat (buttonClick)="handleClick($event)">Default</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button flat (buttonClick)="handleClick($event)" variant="primary">Primary</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button flat (buttonClick)="handleClick($event)" variant="secondary">Secondary</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button flat (buttonClick)="handleClick($event)" variant="tertiary">Tertiary</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button flat (buttonClick)="handleClick($event)" variant="dark">Dark</legods-button>
+    </span>
+  </section>
+
+  <h3 class="section-title">Disabled Button</h3>
+  <section>
+    <span class="spacing">
+      <legods-button (buttonClick)="handleClick($event)" flat variant="primary" disabled>disabled flat button</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button (buttonClick)="handleClick($event)" variant="primary" disabled>disabled button</legods-button>
+    </span>
+  </section>
+
+  <h3 class="section-title">Full Width Button</h3>
+  <section>
+    <span class="spacing">
+      <legods-button (buttonClick)="handleClick($event)" flat full>Full width flat button</legods-button>
+    </span>
+    <span class="spacing">
+      <legods-button (buttonClick)="handleClick($event)" full>Full with button</legods-button>
+    </span>
+  </section>
+
+  <h3 class="section-title">Self Styled Button</h3>
+  <section>
+    <span class="spacing">
+      <legods-button 
+        [styles]="styledButton"
+        aria-label="Button with customizable style (pink color) and a11y attributes"
+        (buttonClick)="handleClick($event)">
+        Styled Button
+      </legods-button>
+    </span>
+  </section>
+  -->
+</section>

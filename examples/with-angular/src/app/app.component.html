@@ -1,70 +1,57 @@
 <section>
   <img src="./assets/angular.png" width="80px" alt="angular-logo" />
   <hr/>
+
   <span class="spacing">
-    <legods-button (buttonClick)="handleClick($event)">Default</legods-button>
-  </span>
-  <span class="spacing">
-    <legods-button variant="primary" (buttonClick)="handleClick($event)">Primary</legods-button>
-  </span>
-  <span class="spacing">
-    <legods-button variant="secondary" (buttonClick)="handleClick($event)">Secondary</legods-button>
-  </span>
-  <span class="spacing">
-    <legods-button variant="tertiary" (buttonClick)="handleClick($event)">Tertiary</legods-button>
-  </span>
-  <span class="spacing">
-    <legods-button variant="dark" (buttonClick)="handleClick($event)">Dark</legods-button>
+    <h1>Reactive Form (Form Control)</h1>
+    <pre style="border: 1px solid #333; padding: 5px;">
+      {{ reactiveForm.value | json }}
+    </pre>
+
+    <form [formGroup]="reactiveForm">
+      <soma-input
+        label="Nome"
+        name="name"
+        inputId="name"
+        formControlName="name">
+      </soma-input>
+
+      <soma-input
+        label="Idade"
+        name="age"
+        inputId="age"
+        formControlName="age">
+      </soma-input>
+
+      <soma-button type="submit" (soma-click)="onSubmitReactiveForm()">enviar</soma-button>
+    </form>
   </span>
 
-  <h3 class="section-title">Flat Buttons</h3>
-  <section>
-    <span class="spacing">
-      <legods-button flat (buttonClick)="handleClick($event)">Default</legods-button>
-    </span>
-    <span class="spacing">
-      <legods-button flat (buttonClick)="handleClick($event)" variant="primary">Primary</legods-button>
-    </span>
-    <span class="spacing">
-      <legods-button flat (buttonClick)="handleClick($event)" variant="secondary">Secondary</legods-button>
-    </span>
-    <span class="spacing">
-      <legods-button flat (buttonClick)="handleClick($event)" variant="tertiary">Tertiary</legods-button>
-    </span>
-    <span class="spacing">
-      <legods-button flat (buttonClick)="handleClick($event)" variant="dark">Dark</legods-button>
-    </span>
-  </section>
+  <br/><hr/><br/>
 
-  <h3 class="section-title">Disabled Button</h3>
-  <section>
-    <span class="spacing">
-      <legods-button (buttonClick)="handleClick($event)" flat variant="primary" disabled>disabled flat button</legods-button>
-    </span>
-    <span class="spacing">
-      <legods-button (buttonClick)="handleClick($event)" variant="primary" disabled>disabled button</legods-button>
-    </span>
-  </section>
+  <span class="spacing">
+    <h1>Template Driven Form (Two Way Data Binding)</h1>
+    <pre style="border: 1px solid #333; padding: 5px;">
+      {{ templateDrivenModel | json }}
+    </pre>
 
-  <h3 class="section-title">Full Width Button</h3>
-  <section>
-    <span class="spacing">
-      <legods-button (buttonClick)="handleClick($event)" flat full>Full width flat button</legods-button>
-    </span>
-    <span class="spacing">
-      <legods-button (buttonClick)="handleClick($event)" full>Full with button</legods-button>
-    </span>
-  </section>
+    <form #templateDrivenForm="ngForm">
+      <soma-input
+        label="Nome"
+        name="name"
+        inputId="name"
+        [(ngModel)]="templateDrivenModel.name">
+      </soma-input>
 
-  <h3 class="section-title">Self Styled Button</h3>
-  <section>
-    <span class="spacing">
-      <legods-button 
-        [styles]="styledButton"
-        aria-label="Button with customizable style (pink color) and a11y attributes"
-        (buttonClick)="handleClick($event)">
-        Styled Button
-      </legods-button>
-    </span>
-  </section>
+      <soma-input
+        label="Idade"
+        name="age"
+        inputId="age"
+        [(ngModel)]="templateDrivenModel.age">
+      </soma-input>
+
+      <soma-button type="submit" (soma-click)="onSubmitTemplateDrivenForm()">enviar</soma-button>
+    </form>
+  </span>
+
 </section>

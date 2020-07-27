@@ -6,6 +6,9 @@ import { environment } from './environments/environment';
 
 import { applyPolyfills, defineCustomElements } from '@lego-ds/core/loader';
 
+// Soma DS
+import { applyPolyfills as somaApplyPolyfills, defineCustomElements as somaDefineCustomElements } from '@lego-ds/html/loader';
+
 if (environment.production) {
   enableProdMode();
 }
@@ -15,4 +18,9 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 applyPolyfills().then(() => {
   defineCustomElements()
+});
+
+// Soma DS
+somaApplyPolyfills().then(() => {
+  somaDefineCustomElements()
 })

@@ -13,6 +13,81 @@ export namespace Components {
         "styles": any;
         "variant": string;
     }
+    interface LegodsInput {
+        "disabled": boolean;
+        "inputId": string;
+        "label": string;
+        "name": string;
+        "value": string;
+    }
+    interface SomaCheckbox {
+        /**
+          * [*] Define string de acessibilidade `aria-label`
+         */
+        "ariaLabel": string;
+        /**
+          * Define se está selecionado
+         */
+        "checked": boolean;
+        /**
+          * Desabilita o componente
+         */
+        "disabled": boolean;
+        /**
+          * Modifica o tema para inverse
+         */
+        "inverse": boolean;
+        /**
+          * Define a `label`
+         */
+        "label": string;
+        /**
+          * O valor do checkbox
+         */
+        "value"?: any | null;
+    }
+    interface SomaTextField {
+        /**
+          * [*] Define string de acessibilidade `aria-label`
+         */
+        "ariaLabel": string;
+        /**
+          * Desabilita o componente
+         */
+        "disabled": boolean;
+        /**
+          * Define tipo do feedback: `error`, `success`
+         */
+        "feedback": string;
+        /**
+          * Habilita ícone no componente
+         */
+        "icon": string;
+        /**
+          * Define `id` da input e `for` do label
+         */
+        "inputId": string;
+        /**
+          * Define a label do componente
+         */
+        "label": string;
+        /**
+          * Define mensagem de feedback
+         */
+        "message": string;
+        /**
+          * O nome do controle que é submetido junto com form data
+         */
+        "name": string;
+        /**
+          * [*] Define tipo de input
+         */
+        "type": string;
+        /**
+          * Valor de input
+         */
+        "value": string;
+    }
 }
 declare global {
     interface HTMLLegodsButtonElement extends Components.LegodsButton, HTMLStencilElement {
@@ -21,8 +96,29 @@ declare global {
         prototype: HTMLLegodsButtonElement;
         new (): HTMLLegodsButtonElement;
     };
+    interface HTMLLegodsInputElement extends Components.LegodsInput, HTMLStencilElement {
+    }
+    var HTMLLegodsInputElement: {
+        prototype: HTMLLegodsInputElement;
+        new (): HTMLLegodsInputElement;
+    };
+    interface HTMLSomaCheckboxElement extends Components.SomaCheckbox, HTMLStencilElement {
+    }
+    var HTMLSomaCheckboxElement: {
+        prototype: HTMLSomaCheckboxElement;
+        new (): HTMLSomaCheckboxElement;
+    };
+    interface HTMLSomaTextFieldElement extends Components.SomaTextField, HTMLStencilElement {
+    }
+    var HTMLSomaTextFieldElement: {
+        prototype: HTMLSomaTextFieldElement;
+        new (): HTMLSomaTextFieldElement;
+    };
     interface HTMLElementTagNameMap {
         "legods-button": HTMLLegodsButtonElement;
+        "legods-input": HTMLLegodsInputElement;
+        "soma-checkbox": HTMLSomaCheckboxElement;
+        "soma-text-field": HTMLSomaTextFieldElement;
     }
 }
 declare namespace LocalJSX {
@@ -34,8 +130,110 @@ declare namespace LocalJSX {
         "styles"?: any;
         "variant"?: string;
     }
+    interface LegodsInput {
+        "disabled"?: boolean;
+        "inputId"?: string;
+        "label"?: string;
+        "name"?: string;
+        "value"?: string;
+    }
+    interface SomaCheckbox {
+        /**
+          * [*] Define string de acessibilidade `aria-label`
+         */
+        "ariaLabel"?: string;
+        /**
+          * Define se está selecionado
+         */
+        "checked"?: boolean;
+        /**
+          * Desabilita o componente
+         */
+        "disabled"?: boolean;
+        /**
+          * Modifica o tema para inverse
+         */
+        "inverse"?: boolean;
+        /**
+          * Define a `label`
+         */
+        "label"?: string;
+        /**
+          * Emite um `CustomEvent` quando há perda de foco
+         */
+        "onSoma-blur"?: (event: CustomEvent<void>) => void;
+        /**
+          * Emite um `CustomEvent` com `checked` quando `checked` muda
+         */
+        "onSoma-change"?: (event: CustomEvent<boolean>) => void;
+        /**
+          * Emite um `CustomEvent` quando há foco
+         */
+        "onSoma-focus"?: (event: CustomEvent<void>) => void;
+        /**
+          * O valor do checkbox
+         */
+        "value"?: any | null;
+    }
+    interface SomaTextField {
+        /**
+          * [*] Define string de acessibilidade `aria-label`
+         */
+        "ariaLabel"?: string;
+        /**
+          * Desabilita o componente
+         */
+        "disabled"?: boolean;
+        /**
+          * Define tipo do feedback: `error`, `success`
+         */
+        "feedback"?: string;
+        /**
+          * Habilita ícone no componente
+         */
+        "icon"?: string;
+        /**
+          * Define `id` da input e `for` do label
+         */
+        "inputId"?: string;
+        /**
+          * Define a label do componente
+         */
+        "label"?: string;
+        /**
+          * Define mensagem de feedback
+         */
+        "message"?: string;
+        /**
+          * O nome do controle que é submetido junto com form data
+         */
+        "name"?: string;
+        /**
+          * Emite um `CustomEvent` quando há perda de foco
+         */
+        "onSoma-blur"?: (event: CustomEvent<void>) => void;
+        /**
+          * Emite um `CustomEvent` com o `value` quando há input
+         */
+        "onSoma-change"?: (event: CustomEvent<string>) => void;
+        /**
+          * Emite um `CustomEvent` quando há foco
+         */
+        "onSoma-focus"?: (event: CustomEvent<void>) => void;
+        /**
+          * [*] Define tipo de input
+         */
+        "type"?: string;
+        /**
+          * Valor de input
+         */
+        "value"?: string;
+    }
     interface IntrinsicElements {
         "legods-button": LegodsButton;
+        "legods-input": LegodsInput;
+        "soma-checkbox": SomaCheckbox;
+        "soma-text-field": SomaTextField;
     }
 }
 export { LocalJSX as JSX };
@@ -43,6 +241,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "legods-button": LocalJSX.LegodsButton & JSXBase.HTMLAttributes<HTMLLegodsButtonElement>;
+            "legods-input": LocalJSX.LegodsInput & JSXBase.HTMLAttributes<HTMLLegodsInputElement>;
+            "soma-checkbox": LocalJSX.SomaCheckbox & JSXBase.HTMLAttributes<HTMLSomaCheckboxElement>;
+            "soma-text-field": LocalJSX.SomaTextField & JSXBase.HTMLAttributes<HTMLSomaTextFieldElement>;
         }
     }
 }

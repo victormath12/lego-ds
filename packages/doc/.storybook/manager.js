@@ -12,4 +12,5 @@ setTimeout(function() {
   addons.elements.panel["naver/storyboook-addon-preview/panel"].title = "Snippets";
   addons.elements.panel["storybook/a11y/panel"].title = "Acessibilidade";
   addons.elements.panel["storybook-addon-figma/addon-panel"].title = "Design";
+  addons.elements.panel["rootAttribute/panel"].title = "Temas";
 }, 0);
